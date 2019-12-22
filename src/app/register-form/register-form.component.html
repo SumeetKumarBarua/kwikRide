@@ -1,0 +1,90 @@
+<app-layout headerName='REGISTER WITH APP' loggedIn="false">
+    <div class="centerAlign">
+        <div align="center" *ngIf='errorMsg' class="invalid-feedback">Something goes wrong. Close the browser and try again</div>
+        <div align="center" *ngIf='successMsg' class="valid-feedback">Registered Successfully! Please click on login</div>
+        <div class='inside-box'>
+          
+        <form [formGroup]='registerForm' (ngSubmit)='send();'>
+            <div class="example-container">
+                <mat-form-field style="width: 100%">
+                    <mat-label>Full Name</mat-label>
+                    <input placeholder="enter your firstname and lastname" formControlName='fullName'  matInput [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }">
+                    
+                </mat-form-field>
+                <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback marginminus10">
+                    <div *ngIf="f.fullName.errors.required">FullName  is required</div>
+                </div>
+              
+            </div>
+            <div class="example-container">
+                <mat-form-field style="width: 100%">
+                    <mat-label>Email ID</mat-label>
+                    <input placeholder="enter your email ID" formControlName='email'   matInput [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                   
+                </mat-form-field>
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback marginminus10">
+                    <div *ngIf="f.email.errors.required">Email  is required</div>
+                    <div *ngIf="f.email.errors.email">Please enter a valid Email</div>
+                </div>
+            </div>
+            <div class="example-container">
+                <mat-form-field style="width: 100%">
+                    <mat-label>Mobile number</mat-label>
+                    <input placeholder="10-digit mobile number" type="number" formControlName='mobile'  matInput [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }">
+                  
+                </mat-form-field>
+                <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback marginminus10">
+                    <div *ngIf="f.mobile.errors.required">Mobile  is required</div>
+                    <div *ngIf="f.mobile.errors.pattern">Please enter a valid mobile No</div>
+                </div>
+            </div>
+            <div class="example-container">
+                <mat-form-field style="width: 100%">
+                    <mat-label>Password (min 6 characters)</mat-label>
+                    <input placeholder="set your password" matInput type="password" formControlName='password' [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    
+                </mat-form-field>
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback marginminus10">
+                    <div *ngIf="f.password.errors.required">Password  is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                </div>
+            </div>
+
+            <div class="example-container">
+                <mat-form-field style="width: 100%">
+                    <mat-label>Re-enter password</mat-label>
+                    <input placeholder="re-enter your password" matInput type="password" formControlName='retypePassword'  [ngClass]="{ 'is-invalid': submitted && f.retypePassword.errors }">
+                    
+                </mat-form-field> 
+                <div *ngIf="submitted && f.retypePassword.errors" class="invalid-feedback marginminus10">
+                    <div *ngIf="f.retypePassword.errors.required">Retype Password  is required</div>
+                    <div *ngIf="f.retypePassword.errors.mustMatch">Passwords must match</div>
+                </div>
+            </div>
+
+            <div class="example-container">
+                <mat-form-field style="width: 100%">
+                    <mat-label>Car Model</mat-label>
+                    <input placeholder="name fo the car you have" matInput formControlName='carModel'  [ngClass]="{ 'is-invalid': submitted && f.carModel.errors }" >
+               
+                </mat-form-field>
+                <div *ngIf="submitted && f.carModel.errors" class="invalid-feedback marginminus10">
+                    <div *ngIf="f.carModel.errors.required">Car Model  is required</div>
+                </div>
+            </div>
+            
+            <div align="center" >
+
+                <button mat-raised-button class="kwikButton" [disabled]='registerForm.invalid'>Register</button>
+
+            </div>
+        </form>
+        </div>
+        <div align="center" class='register'>
+            <div>
+                Already have an account? &nbsp; <a [routerLink]="['']">LOGIN NOW </a>
+            </div>
+        </div>
+    </div>
+
+</app-layout>

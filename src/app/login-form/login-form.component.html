@@ -1,0 +1,35 @@
+<app-layout headerName='LOGIN TO APP ' loggedIn="false">
+    <div class="centerAlign">
+        <div *ngIf='errorMsg' class="error">Username or Password is incorrect</div>
+        <div class='inside-box'>
+        <form [formGroup]='loginForm' (ngSubmit)='onLoginClick()'>
+            <div class="example-container">
+                <mat-form-field style="width: 100%">
+                    <mat-label>Username</mat-label>
+                    <input placeholder="10-digit mobile number or email ID" formControlName='username' matInput>
+                </mat-form-field>
+            </div>
+            <div class="example-container">
+                <mat-form-field style="width: 100%">
+                    <mat-label>Password</mat-label>
+                    <input placeholder="Password" matInput type="password" formControlName='password'>
+                </mat-form-field>
+            </div>
+            <div>
+                <a routerLink="/forgotPassword">FORGOT PASSWORD?</a>
+            </div>
+            <div align="center">
+
+                <button mat-raised-button color="primary" type='submit' class="kwikButton" [disabled]='loginForm.invalid'>Login</button>
+
+            </div>
+        </form>
+        </div>
+        <div align="center" class='register'>
+            <div>
+                Don't have an account? &nbsp; <a [routerLink]="['/register']">REGISTER NOW </a>
+            </div>
+        </div>
+    </div>
+    
+</app-layout>

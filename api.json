@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "fullName": "smith",
+      "email": "smith@gmail.com",
+      "mobile": "7348895730",
+      "password": "hola",
+      "carModel": "ertiga1"
+    },
+    {
+      "id": "2",
+      "fullName": "skd",
+      "email": "skd@gmail.com",
+      "mobile": "9988776655",
+      "password": "gola",
+      "carModel": "ertiga2"
+    },
+    {
+      "fullName": "ss1",
+      "email": "ss@as.com",
+      "mobile": 7878787873,
+      "password": "sqqaqa",
+      "carModel": "sqqaqa",
+      "id": 0.6882990806127278
+    },
+    {
+      "fullName": "ss2",
+      "email": "ss@a",
+      "mobile": 7878797878,
+      "password": "sqqaqa",
+      "carModel": "sqqaqa",
+      "id": 0.9253713131990915
+    },
+    {
+      "fullName": "sumeet",
+      "email": "b311066@iiit-bh.ac.in",
+      "mobile": 7867564534,
+      "password": "sumeet",
+      "carModel": "Baleno",
+      "id": 0.44014578331359244
+    }
+  ],
+  "drivers": [
+    {
+      "id": "1",
+      "driverName": "jayant",
+      "startLoc": "brookfield",
+      "endLoc": "whitefield",
+      "carType": "ertiga",
+      "seatAvailable": "1",
+      "rating": "4.5",
+      "eta": "3"
+    },
+    {
+      "id": "2",
+      "driverName": "sammy",
+      "startLoc": "brookfield",
+      "endLoc": "whitefield",
+      "carType": "baleno",
+      "seatAvailable": "6",
+      "rating": "4.0",
+      "eta": "6"
+    },
+    {
+      "id": "3",
+      "driverName": "sunil",
+      "startLoc": "brookfield",
+      "endLoc": "kormangala",
+      "carType": "i20",
+      "seatAvailable": "4",
+      "rating": "3.5",
+      "eta": "7"
+    },
+    {
+      "id": "4",
+      "driverName": "sumeet",
+      "startLoc": "brookfield",
+      "endLoc": "cessna tech",
+      "carType": "i20",
+      "seatAvailable": "2",
+      "rating": "4.5",
+      "eta": "2"
+    },
+    {
+      "id": "5",
+      "driverName": "barua",
+      "startLoc": "kormangala",
+      "endLoc": "brookfield",
+      "carType": "baleno",
+      "seatAvailable": "3",
+      "rating": "2.5",
+      "eta": "5"
+    }
+  ]
+}

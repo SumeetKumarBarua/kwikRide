@@ -1,0 +1,38 @@
+.centerAlign {
+    margin: auto;
+    width: 50%;
+    border: 2px solid #e7e4e4;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.inside-box {
+    margin: auto;
+    width: 50%;
+    border: 2px solid #e7e4e4;
+    padding: 30px;
+    margin-top: 10px;
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.register{
+    margin: 20px;
+}
+.error{
+    color: red;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.kwikButton{
+    background-color: #5DADE2 ;
+    color:white;
+    padding:3px 15px 3px 15px;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,55 @@
+<app-layout headerName='PICK A RIDE ' loggedIn="true">
+
+    <div class="search">
+        <form [formGroup]='searchForm' class="display-2c">
+            <div class="example-container">
+                <mat-form-field >
+                    <mat-label>Start From</mat-label>
+                    <input formControlName='start' (ngModelChange)="findRider()" matInput>
+                </mat-form-field>
+            </div>
+            <div class="example-container">
+                <mat-form-field>
+                    <mat-label>Destination</mat-label>
+                    <input matInput formControlName='destination' (ngModelChange)="findRider()">
+                </mat-form-field>
+            </div>
+        </form>
+    </div>
+    
+<div class="centerAlign">
+  
+    <div class="flexAlign">
+        <div *ngIf='!results.length' class="error">No drivers found for given location</div>
+        <div  *ngFor="let i of results" class="childBoxes" >
+            <div class="template-flex"   (click)="selectDriver(i);" [ngClass]="{ 'select-bgcolor': selectedItem==i}">
+                <div style="padding:10px;">
+                    <i class='fa fa-user-circle icon' *ngIf="selectedItem!=i"></i>
+                    <i class='fa fa-check-circle icon' *ngIf="selectedItem==i"></i>
+                </div>
+                <section class="info">
+                    <div class="layoutbox">{{i.driverName}} <span class="lightText">{{i.eta}}<span *ngIf="i.eta>1">(s)</span> miles away</span></div>
+                    <div ><span class="labelText">route : </span> {{i.startLoc}} to {{i.endLoc}}</div>
+                    <div><span class="labelText">car : </span>{{i.carType}} &nbsp;&nbsp; <span class="labelText">seats available : </span>{{i.seatAvailable}}</div>
+                </section>
+                <div class="ratings">
+                        <span *ngIf="selectedItem!=i">{{i.rating}} <span class="lightText">|</span> </span>
+                        <i class='fa fa-star' *ngIf="selectedItem!=i" style='color:lightgray'></i>
+                        <i class='fa fa-phone icon-phone' *ngIf="selectedItem==i"></i>
+
+                </div>
+            </div>
+        </div>
+       
+    </div>
+  
+    <div align="center" class="margin20">
+        <div align="center" *ngIf='successMsg' class="valid-feedback">{{successMsge}}</div><br>
+
+        <button mat-raised-button  type='submit' class="kwikButton" [disabled]='!isSelected' (click)="confirmRide();">CONFIRM RIDE</button>
+
+    </div>
+    
+</div>
+
+</app-layout>

@@ -1,0 +1,90 @@
+.flexAlign{
+    display: flex;
+    flex:2;
+    flex-wrap: wrap;
+    flex-grow:0;
+    flex-shrink:0;
+    flex-basis:50%;
+    justify-content:space-between ;
+    
+}
+
+.centerAlign{
+    margin-top: -3px;
+}
+
+.example-container {
+    width: 100%;
+    margin:15px;
+    padding: 10px;
+    background-color: white;
+}
+
+.display-2c{
+    display: flex;  
+}
+
+.search{
+    margin: auto;
+    width: 50%;
+    border: 2px solid #e7e4e4;
+    padding: 30px;
+    margin-top: 31px;
+    background-color: #ece7e7;
+}
+
+.template-flex{
+    display: flex;
+    border: 2px solid #e7e4e4;
+    margin-top: 31px;    
+
+}
+.childBoxes{
+    width:45%;
+    height:100%;
+    cursor: pointer;
+}
+.icon{
+    font-size:48px;
+    color:lightgray
+}
+
+.icon-phone{
+    font-size:48px;
+    color:green
+}
+
+.select-bgcolor{
+    background-color: rgb(133, 133, 228);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+.labelText{
+    font-size:11px;
+    font-weight: 700;
+}
+.lightText{
+    font-style: italic;
+    font-size:9px;
+    color:lightgray;
+}
+.layoutbox{
+    font-size: 18px;
+    font-weight:bolder
+  
+}
+.ratings{
+    color:#5DADE2 ;
+    padding-left:10px;
+    padding-top: 10px;;
+}
+.info{
+    padding-top:10px;
+    padding-bottom:15px;
+}
+.margin20{
+    margin-top:50px;
+}
